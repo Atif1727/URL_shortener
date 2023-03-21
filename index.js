@@ -11,8 +11,10 @@ dotenv.config();
 app.use('/', indexRouter);
 app.use('/api', urlsRouter);
 
-// MONGOOSE SETUP
+// SETUP PORT CONSTANTS
 const port=process.env.PORT;
+
+// MONGOOSE SETUP
 mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParser: true,
